@@ -1,21 +1,125 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base de datos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .contenedor {
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a5f;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .descripcion {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #d5dce5;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        @media (max-width: 500px) {
+            .contenedor {
+                padding: 24px 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Base de datos</h1>
+    <div class="contenedor">
 
+        <h1>Base de datos</h1>
+        <p class="descripcion">
+            Introduce los datos para registrar una persona.
+        </p>
 
-<form action="https://script.google.com/macros/s/AKfycbypbTdD2fC1mqeIe1GoxRAV8mVe7TzayirSsoFI5G3Q4KYEnbsDzxUvY_BqKm6Oxo4pFQ/exec" method="post">
-    Correo: <input type="email" name="correo" required><br><br>
-    Nombre: <input type="text" name="nombre" required><br><br>
-    Apellido: <input type="text" name="apellido" required><br><br>
-    Edad: <input type="number" name="edad" required><br><br>
+        <form action="https://script.google.com/macros/s/AKfycbypbTdD2fC1mqeIe1GoxRAV8mVe7TzayirSsoFI5G3Q4KYEnbsDzxUvY_BqKm6Oxo4pFQ/exec" method="post">
 
-    <input type="submit" value="Guardar">
-</form>
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo"
+                   placeholder="ejemplo@correo.com" required>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre"
+                   placeholder="Introduce tu nombre" required>
+
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido"
+                   placeholder="Introduce tu apellido" required>
+
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad"
+                   placeholder="Introduce tu edad"
+                   min="0" max="120" required>
+
+            <button type="submit">Guardar registro</button>
+
+        </form>
+
+    </div>
 
 </body>
 </html>
